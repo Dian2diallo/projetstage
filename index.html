@@ -1,0 +1,557 @@
+```html
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="DIAN SHOP - Fast-food à Dakar">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Accueil — DIAN SHOP</title>
+</head>
+
+<body>
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b">
+
+        <div class="container-shop h-20 flex items-center justify-between">
+
+            <a href="index.html" class="font-black text-xl">
+                🍔 DIAN <span class="text-orange-500">SHOP</span>
+            </a>
+
+            <nav class="hidden md:flex gap-7 text-sm font-bold">
+                <a href="index.html">Accueil</a>
+                <a href="produits.html">Menu</a>
+                <a href="a-propos.html">À propos</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="flex gap-2">
+
+                <a href="panier.html" class="relative w-11 h-11 bg-gray-50 rounded-xl flex items-center justify-center">
+                    🛒
+                    <span data-cart-count class="hidden absolute -top-1 -right-1 bg-orange-500 text-white text-[10px] min-w-5 h-5 rounded-full flex items-center justify-center">
+                        0
+                    </span>
+                </a>
+
+                <a href="produits.html" class="hidden sm:block gradient-orange text-white px-5 py-3 rounded-xl font-bold">
+                    Commander
+                </a>
+
+                <button id="mobileMenuButton" class="md:hidden w-11 h-11 bg-gray-50 rounded-xl">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu md:hidden border-t">
+
+            <nav class="container-shop py-3 grid">
+
+                <a class="p-3" href="index.html">
+                    Accueil
+                </a>
+
+                <a class="p-3" href="produits.html">
+                    Menu
+                </a>
+
+                <a class="p-3" href="a-propos.html">
+                    À propos
+                </a>
+
+                <a class="p-3" href="contact.html">
+                    Contact
+                </a>
+
+                <a class="p-3 text-orange-600" href="panier.html">
+                    Panier
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="relative bg-cover bg-center bg-no-repeat"
+         style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=90');">
+
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <div class="container-shop relative z-10 py-16 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
+
+        <div class="text-white">
+
+            <span class="bg-white text-orange-600 px-4 py-2 rounded-full font-bold text-sm">
+                🔥 Frais • Rapide • Délicieux
+            </span>
+
+            <h1 class="text-5xl md:text-7xl font-black leading-none mt-6">
+                Le goût qui vous
+                <span class="text-orange-400">fait revenir !</span>
+            </h1>
+
+            <p class="text-gray-200 text-lg leading-8 mt-6">
+                Découvrez nos délicieux fast-foods préparés avec passion et livrés directement chez vous.
+            </p>
+
+            <div class="flex flex-wrap gap-3 mt-8">
+
+                <a href="produits.html"
+                   class="gradient-orange text-white px-6 py-4 rounded-2xl font-black">
+                    Commander maintenant →
+                </a>
+
+                <a href="#populaires"
+                   class="bg-white text-gray-900 px-6 py-4 rounded-2xl font-black border">
+                    Voir le menu
+                </a>
+
+            </div>
+
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1100&q=90"
+             class="w-full h-[430px] object-cover rounded-[2rem] shadow-2xl"
+             alt="Burger">
+
+    </div>
+
+</section>
+
+        <section class="py-20 bg-gray-50">
+
+            <div class="container-shop text-center">
+
+                <span class="text-orange-500 font-black text-sm">
+                    NOTRE MENU
+                </span>
+
+                <h2 class="text-3xl md:text-4xl font-black mt-2">
+                    Que voulez-vous manger aujourd'hui ?
+                </h2>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mt-10">
+
+                    <a href="produits.html?categorie=burgers"
+                       class="bg-white rounded-2xl p-4 text-center border hover:bg-orange-500 hover:text-white transition">
+                        <div class="text-3xl">
+                            🍔
+                        </div>
+                        <b class="text-sm">
+                            Burgers
+                        </b>
+                    </a>
+
+                    <a href="produits.html?categorie=fataya"
+                       class="bg-white rounded-2xl p-4 text-center border hover:bg-orange-500 hover:text-white transition">
+                        <div class="text-3xl">
+                            🥟
+                        </div>
+                        <b class="text-sm">
+                            Fataya
+                        </b>
+                    </a>
+
+                    <a href="produits.html?categorie=pizza"
+                       class="bg-white rounded-2xl p-4 text-center border hover:bg-orange-500 hover:text-white transition">
+                        <div class="text-3xl">
+                            🍕
+                        </div>
+                        <b class="text-sm">
+                            Pizza
+                        </b>
+                    </a>
+
+                    <a href="produits.html?categorie=tacos"
+                       class="bg-white rounded-2xl p-4 text-center border hover:bg-orange-500 hover:text-white transition">
+                        <div class="text-3xl">
+                            🌮
+                        </div>
+                        <b class="text-sm">
+                            Tacos
+                        </b>
+                    </a>
+
+                    <a href="produits.html?categorie=poulet"
+                       class="bg-white rounded-2xl p-4 text-center border hover:bg-orange-500 hover:text-white transition">
+                        <div class="text-3xl">
+                            🍗
+                        </div>
+                        <b class="text-sm">
+                            Poulet
+                        </b>
+                    </a>
+
+                    <a href="produits.html?categorie=frites"
+                       class="bg-white rounded-2xl p-4 text-center border hover:bg-orange-500 hover:text-white transition">
+                        <div class="text-3xl">
+                            🍟
+                        </div>
+                        <b class="text-sm">
+                            Frites
+                        </b>
+                    </a>
+
+                    <a href="produits.html?categorie=boissons"
+                       class="bg-white rounded-2xl p-4 text-center border hover:bg-orange-500 hover:text-white transition">
+                        <div class="text-3xl">
+                            🥤
+                        </div>
+                        <b class="text-sm">
+                            Boissons
+                        </b>
+                    </a>
+
+                    <a href="produits.html?categorie=desserts"
+                       class="bg-white rounded-2xl p-4 text-center border hover:bg-orange-500 hover:text-white transition">
+                        <div class="text-3xl">
+                            🍰
+                        </div>
+                        <b class="text-sm">
+                            Desserts
+                        </b>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="populaires" class="py-20">
+
+            <div class="container-shop">
+
+                <div class="flex justify-between items-end">
+
+                    <div>
+
+                        <span class="text-orange-500 font-black text-sm">
+                            À NE PAS MANQUER
+                        </span>
+
+                        <h2 class="text-3xl md:text-4xl font-black mt-2">
+                            Nos meilleures ventes
+                        </h2>
+
+                    </div>
+
+                    <a href="produits.html" class="text-orange-600 font-bold">
+                        Voir tout →
+                    </a>
+
+                </div>
+
+                <div id="popularGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="py-20 bg-gray-50">
+
+            <div class="container-shop">
+
+                <div class="gradient-orange text-white rounded-[2rem] p-8 md:p-12 grid md:grid-cols-2 gap-8 items-center">
+
+                    <div>
+
+                        <b>
+                            🔥 OFFRE DU MOMENT
+                        </b>
+
+                        <h2 class="text-4xl font-black mt-3">
+                            Menu Fataya
+                        </h2>
+
+                        <p class="mt-3">
+                            3 fatayas + frites + boisson.
+                        </p>
+
+                        <div class="text-3xl font-black mt-5">
+                            3 000 FCFA
+                            <del class="text-base ml-2">
+                                3 500 FCFA
+                            </del>
+                        </div>
+
+                        <button onclick="addToCart(17)"
+                                class="mt-6 bg-white text-orange-600 px-6 py-3 rounded-xl font-black">
+                            Ajouter au panier
+                        </button>
+
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=900&q=85"
+                         class="rounded-3xl h-64 w-full object-cover">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="py-20">
+
+            <div class="container-shop text-center">
+
+                <h2 class="text-3xl font-black">
+                    Votre repas arrive jusqu'à vous ! 🚴
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-6 mt-10 text-left">
+
+                    <div class="bg-gray-50 p-7 rounded-3xl">
+
+                        <b class="text-orange-500 text-2xl">
+                            01
+                        </b>
+
+                        <h3 class="font-black text-xl mt-4">
+                            Choisissez
+                        </h3>
+
+                        <p class="text-gray-500 mt-2">
+                            Sélectionnez vos plats préférés.
+                        </p>
+
+                    </div>
+
+                    <div class="bg-gray-50 p-7 rounded-3xl">
+
+                        <b class="text-orange-500 text-2xl">
+                            02
+                        </b>
+
+                        <h3 class="font-black text-xl mt-4">
+                            Commandez
+                        </h3>
+
+                        <p class="text-gray-500 mt-2">
+                            Validez votre commande.
+                        </p>
+
+                    </div>
+
+                    <div class="bg-gray-50 p-7 rounded-3xl">
+
+                        <b class="text-orange-500 text-2xl">
+                            03
+                        </b>
+
+                        <h3 class="font-black text-xl mt-4">
+                            Recevez
+                        </h3>
+
+                        <p class="text-gray-500 mt-2">
+                            Nous livrons votre commande à Dakar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="py-20 bg-gray-50">
+
+            <div class="container-shop text-center">
+
+                <h2 class="text-3xl font-black">
+                    Ce que nos clients pensent de nous
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-6 mt-10 text-left">
+
+                    <div class="bg-white p-7 rounded-3xl">
+
+                        ⭐️⭐️⭐️⭐️⭐️
+
+                        <p class="text-gray-600 mt-4">
+                            « Les fatayas sont vraiment délicieux et la livraison est rapide. »
+                        </p>
+
+                        <b class="block mt-5">
+                            Awa S.
+                        </b>
+
+                    </div>
+
+                    <div class="bg-white p-7 rounded-3xl">
+
+                        ⭐️⭐️⭐️⭐️⭐️
+
+                        <p class="text-gray-600 mt-4">
+                            « J'ai beaucoup aimé le burger. Très bon rapport qualité-prix. »
+                        </p>
+
+                        <b class="block mt-5">
+                            Moussa D.
+                        </b>
+
+                    </div>
+
+                    <div class="bg-white p-7 rounded-3xl">
+
+                        ⭐️⭐️⭐️⭐️⭐️
+
+                        <p class="text-gray-600 mt-4">
+                            « Commande simple, repas chaud et service sérieux. »
+                        </p>
+
+                        <b class="block mt-5">
+                            Fatou K.
+                        </b>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>renderGrid(document.getElementById("popularGrid"),produits.filter(p=>p.populaire).slice(0,8)))
+    </script>
+
+
+    <footer class="bg-gray-950 text-white mt-20">
+
+        <div class="container-shop py-14 grid md:grid-cols-4 gap-10">
+
+            <div>
+
+                <b class="text-xl">
+                    🍔 DIAN SHOP
+                </b>
+
+                <p class="text-gray-400 text-sm mt-4">
+                    Le goût qui vous fait revenir ! Fast-food savoureux livré à Dakar.
+                </p>
+
+            </div>
+
+            <div>
+
+                <b>
+                    Navigation
+                </b>
+
+                <div class="grid gap-3 mt-4 text-sm text-gray-400">
+
+                    <a href="index.html">
+                        Accueil
+                    </a>
+
+                    <a href="produits.html">
+                        Menu
+                    </a>
+
+                    <a href="a-propos.html">
+                        À propos
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <b>
+                    Catégories
+                </b>
+
+                <div class="grid gap-3 mt-4 text-sm text-gray-400">
+
+                    <a href="produits.html?categorie=burgers">
+                        Burgers
+                    </a>
+
+                    <a href="produits.html?categorie=fataya">
+                        Fataya
+                    </a>
+
+                    <a href="produits.html?categorie=pizza">
+                        Pizza
+                    </a>
+
+                    <a href="produits.html?categorie=tacos">
+                        Tacos
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <b>
+                    Contact
+                </b>
+
+                <div class="grid gap-3 mt-4 text-sm text-gray-400">
+
+                    <p>
+                        📞 +221 77 000 00 00
+                    </p>
+
+                    <p>
+                        💬 WhatsApp
+                    </p>
+
+                    <p>
+                        📍 Dakar, Sénégal
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="border-t border-white/10 text-center py-5 text-xs text-gray-500">
+            © 2026 DIAN SHOP — Tous droits réservés.
+        </div>
+
+    </footer>
+
+
+    <script src="js/produits.js"></script>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
+```

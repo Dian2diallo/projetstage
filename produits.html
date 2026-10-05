@@ -1,0 +1,577 @@
+```html
+<!doctype html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <meta name="description" content="DIAN SHOP - Fast-food à Dakar">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Menu — DIAN SHOP</title>
+
+</head>
+
+
+<body>
+
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b">
+
+
+        <div class="container-shop h-20 flex items-center justify-between">
+
+
+            <a href="index.html" class="font-black text-xl">
+
+                🍔 DIAN
+
+                <span class="text-orange-500">
+                    SHOP
+                </span>
+
+            </a>
+
+
+            <nav class="hidden md:flex gap-7 text-sm font-bold">
+
+                <a href="index.html">
+                    Accueil
+                </a>
+
+                <a href="produits.html">
+                    Menu
+                </a>
+
+                <a href="a-propos.html">
+                    À propos
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="flex gap-2">
+
+
+                <a href="panier.html"
+                   class="relative w-11 h-11 bg-gray-50 rounded-xl flex items-center justify-center">
+
+                    🛒
+
+                    <span data-cart-count
+                          class="hidden absolute -top-1 -right-1 bg-orange-500 text-white text-[10px] min-w-5 h-5 rounded-full flex items-center justify-center">
+
+                        0
+
+                    </span>
+
+                </a>
+
+
+                <a href="produits.html"
+                   class="hidden sm:block gradient-orange text-white px-5 py-3 rounded-xl font-bold">
+
+                    Commander
+
+                </a>
+
+
+                <button id="mobileMenuButton"
+                        class="md:hidden w-11 h-11 bg-gray-50 rounded-xl">
+
+                    ☰
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div id="mobileMenu"
+             class="mobile-menu md:hidden border-t">
+
+
+            <nav class="container-shop py-3 grid">
+
+
+                <a class="p-3" href="index.html">
+                    Accueil
+                </a>
+
+
+                <a class="p-3" href="produits.html">
+                    Menu
+                </a>
+
+
+                <a class="p-3" href="a-propos.html">
+                    À propos
+                </a>
+
+
+                <a class="p-3" href="contact.html">
+                    Contact
+                </a>
+
+
+                <a class="p-3 text-orange-600" href="panier.html">
+                    Panier
+                </a>
+
+
+            </nav>
+
+
+        </div>
+
+
+    </header>
+
+
+    <main>
+
+
+        <section class="bg-gray-50 py-14 text-center">
+
+
+            <div class="container-shop">
+
+
+                <span class="text-orange-500 font-black text-sm">
+                    DIAN SHOP
+                </span>
+
+
+                <h1 class="text-4xl font-black mt-2">
+                    Notre menu
+                </h1>
+
+
+                <p class="text-gray-500 mt-3">
+                    Choisissez vos plats préférés.
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+        <section class="py-10">
+
+
+            <div class="container-shop">
+
+
+                <div class="flex flex-col lg:flex-row gap-4 justify-between">
+
+
+                    <div class="flex flex-wrap gap-2">
+
+
+                        <button data-cat="all"
+                                class="cat px-4 py-2 rounded-xl border bg-white text-sm font-bold">
+
+                            Toutes
+
+                        </button>
+
+
+                        <button data-cat="burgers"
+                                class="cat px-4 py-2 rounded-xl border bg-white text-sm font-bold">
+
+                            Burgers
+
+                        </button>
+
+
+                        <button data-cat="fataya"
+                                class="cat px-4 py-2 rounded-xl border bg-white text-sm font-bold">
+
+                            Fataya
+
+                        </button>
+
+
+                        <button data-cat="pizza"
+                                class="cat px-4 py-2 rounded-xl border bg-white text-sm font-bold">
+
+                            Pizza
+
+                        </button>
+
+
+                        <button data-cat="tacos"
+                                class="cat px-4 py-2 rounded-xl border bg-white text-sm font-bold">
+
+                            Tacos
+
+                        </button>
+
+
+                        <button data-cat="poulet"
+                                class="cat px-4 py-2 rounded-xl border bg-white text-sm font-bold">
+
+                            Poulet
+
+                        </button>
+
+
+                        <button data-cat="frites"
+                                class="cat px-4 py-2 rounded-xl border bg-white text-sm font-bold">
+
+                            Frites
+
+                        </button>
+
+
+                        <button data-cat="boissons"
+                                class="cat px-4 py-2 rounded-xl border bg-white text-sm font-bold">
+
+                            Boissons
+
+                        </button>
+
+
+                        <button data-cat="desserts"
+                                class="cat px-4 py-2 rounded-xl border bg-white text-sm font-bold">
+
+                            Desserts
+
+                        </button>
+
+
+                    </div>
+
+
+                    <input id="search"
+                           class="border rounded-xl px-4 py-3 lg:w-80"
+                           placeholder="🔎 Rechercher un produit...">
+
+
+                </div>
+
+
+                <div class="flex justify-between mt-6">
+
+
+                    <span id="count"
+                          class="text-sm text-gray-500">
+                    </span>
+
+
+                    <select id="sort"
+                            class="border rounded-xl px-3 py-2">
+
+
+                        <option value="">
+                            Trier
+                        </option>
+
+
+                        <option value="pa">
+                            Prix croissant
+                        </option>
+
+
+                        <option value="pd">
+                            Prix décroissant
+                        </option>
+
+
+                        <option value="note">
+                            Mieux notés
+                        </option>
+
+
+                    </select>
+
+
+                </div>
+
+
+                <div id="grid"
+                     class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-7">
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <footer class="bg-gray-950 text-white mt-20">
+
+
+        <div class="container-shop py-14 grid md:grid-cols-4 gap-10">
+
+
+            <div>
+
+
+                <b class="text-xl">
+                    🍔 DIAN SHOP
+                </b>
+
+
+                <p class="text-gray-400 text-sm mt-4">
+                    Le goût qui vous fait revenir ! Fast-food savoureux livré à Dakar.
+                </p>
+
+
+            </div>
+
+
+            <div>
+
+
+                <b>
+                    Navigation
+                </b>
+
+
+                <div class="grid gap-3 mt-4 text-sm text-gray-400">
+
+
+                    <a href="index.html">
+                        Accueil
+                    </a>
+
+
+                    <a href="produits.html">
+                        Menu
+                    </a>
+
+
+                    <a href="a-propos.html">
+                        À propos
+                    </a>
+
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div>
+
+
+                <b>
+                    Catégories
+                </b>
+
+
+                <div class="grid gap-3 mt-4 text-sm text-gray-400">
+
+
+                    <a href="produits.html?categorie=burgers">
+                        Burgers
+                    </a>
+
+
+                    <a href="produits.html?categorie=fataya">
+                        Fataya
+                    </a>
+
+
+                    <a href="produits.html?categorie=pizza">
+                        Pizza
+                    </a>
+
+
+                    <a href="produits.html?categorie=tacos">
+                        Tacos
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div>
+
+
+                <b>
+                    Contact
+                </b>
+
+
+                <div class="grid gap-3 mt-4 text-sm text-gray-400">
+
+
+                    <p>
+                        📞 +221 77 000 00 00
+                    </p>
+
+
+                    <p>
+                        💬 WhatsApp
+                    </p>
+
+
+                    <p>
+                        📍 Dakar, Sénégal
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="border-t border-white/10 text-center py-5 text-xs text-gray-500">
+
+            © 2026 DIAN SHOP — Tous droits réservés.
+
+        </div>
+
+
+    </footer>
+
+
+    <script src="js/produits.js"></script>
+
+
+    <script src="js/app.js"></script>
+
+
+    <script>
+
+
+        let cat =
+            new URLSearchParams(location.search).get("categorie") || "all";
+
+
+        function filter() {
+
+
+            let q =
+                document.getElementById("search").value.toLowerCase();
+
+
+            let a =
+                produits.filter(
+                    p =>
+                        (cat == "all" || p.categorie == cat)
+                        &&
+                        (
+                            !q
+                            ||
+                            p.nom.toLowerCase().includes(q)
+                            ||
+                            p.description.toLowerCase().includes(q)
+                        )
+                );
+
+
+            let s =
+                document.getElementById("sort").value;
+
+
+            if (s == "pa")
+                a.sort((x, y) => x.prix - y.prix);
+
+
+            if (s == "pd")
+                a.sort((x, y) => y.prix - x.prix);
+
+
+            if (s == "note")
+                a.sort((x, y) => y.note - x.note);
+
+
+            renderGrid(
+                document.getElementById("grid"),
+                a
+            );
+
+
+            document.getElementById("count").textContent =
+                a.length + " produit(s)";
+
+
+            document.querySelectorAll(".cat").forEach(
+                b =>
+                    b.classList.toggle(
+                        "category-active",
+                        b.dataset.cat == cat
+                    )
+            );
+
+        }
+
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            () => {
+
+
+                document.querySelectorAll(".cat").forEach(
+                    b =>
+                        b.onclick = () => {
+
+                            cat = b.dataset.cat;
+
+                            filter();
+
+                        }
+                );
+
+
+                document.getElementById("search").oninput =
+                    filter;
+
+
+                document.getElementById("sort").onchange =
+                    filter;
+
+
+                filter();
+
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
+```

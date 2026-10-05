@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="DIAN SHOP - Fast-food à Dakar">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <title>Commande — DIAN SHOP</title>
+</head>
+
+<body>
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b">
+
+        <div class="container-shop h-20 flex items-center justify-between">
+
+            <a href="index.html" class="font-black text-xl">
+                🍔 DIAN
+                <span class="text-orange-500">SHOP</span>
+            </a>
+
+            <nav class="hidden md:flex gap-7 text-sm font-bold">
+                <a href="index.html">Accueil</a>
+                <a href="produits.html">Menu</a>
+                <a href="a-propos.html">À propos</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="flex gap-2">
+
+                <a
+                    href="panier.html"
+                    class="relative w-11 h-11 bg-gray-50 rounded-xl flex items-center justify-center"
+                >
+                    🛒
+
+                    <span
+                        data-cart-count
+                        class="hidden absolute -top-1 -right-1 bg-orange-500 text-white text-[10px] min-w-5 h-5 rounded-full flex items-center justify-center"
+                    >
+                        0
+                    </span>
+                </a>
+
+                <a
+                    href="produits.html"
+                    class="hidden sm:block gradient-orange text-white px-5 py-3 rounded-xl font-bold"
+                >
+                    Commander
+                </a>
+
+                <button
+                    id="mobileMenuButton"
+                    class="md:hidden w-11 h-11 bg-gray-50 rounded-xl"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu md:hidden border-t">
+
+            <nav class="container-shop py-3 grid">
+
+                <a class="p-3" href="index.html">
+                    Accueil
+                </a>
+
+                <a class="p-3" href="produits.html">
+                    Menu
+                </a>
+
+                <a class="p-3" href="a-propos.html">
+                    À propos
+                </a>
+
+                <a class="p-3" href="contact.html">
+                    Contact
+                </a>
+
+                <a class="p-3 text-orange-600" href="panier.html">
+                    Panier
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main class="py-14">
+
+        <div class="container-shop">
+
+            <div class="text-center">
+
+                <span class="text-orange-500 font-black text-sm">
+                    DERNIÈRE ÉTAPE
+                </span>
+
+                <h1 class="text-4xl font-black mt-2">
+                    Finaliser ma commande
+                </h1>
+
+            </div>
+
+
+            <div class="grid lg:grid-cols-[1fr_380px] gap-8 mt-10">
+
+                <form id="form" class="border rounded-3xl p-7">
+
+                    <h2 class="text-xl font-black">
+                        Informations de livraison
+                    </h2>
+
+
+                    <div class="grid md:grid-cols-2 gap-5 mt-6">
+
+                        <label class="font-bold text-sm">
+                            Nom complet
+
+                            <input
+                                required
+                                name="nom"
+                                class="w-full border rounded-xl px-4 py-3 mt-2"
+                            >
+                        </label>
+
+
+                        <label class="font-bold text-sm">
+                            Téléphone
+
+                            <input
+                                required
+                                name="tel"
+                                class="w-full border rounded-xl px-4 py-3 mt-2"
+                            >
+                        </label>
+
+
+                        <label class="font-bold text-sm md:col-span-2">
+                            Adresse
+
+                            <input
+                                required
+                                name="adresse"
+                                class="w-full border rounded-xl px-4 py-3 mt-2"
+                            >
+                        </label>
+
+
+                        <label class="font-bold text-sm">
+                            Ville
+
+                            <select
+                                required
+                                name="ville"
+                                class="w-full border rounded-xl px-4 py-3 mt-2"
+                            >
+                                <option value="">
+                                    Choisir
+                                </option>
+
+                                <option>
+                                    Dakar
+                                </option>
+
+                                <option>
+                                    Pikine
+                                </option>
+
+                                <option>
+                                    Guédiawaye
+                                </option>
+
+                                <option>
+                                    Rufisque
+                                </option>
+                            </select>
+
+                        </label>
+
+
+                        <label class="font-bold text-sm">
+                            Quartier
+
+                            <input
+                                required
+                                name="quartier"
+                                class="w-full border rounded-xl px-4 py-3 mt-2"
+                            >
+                        </label>
+
+
+                        <label class="font-bold text-sm md:col-span-2">
+                            Instructions
+
+                            <textarea
+                                name="instructions"
+                                rows="3"
+                                class="w-full border rounded-xl px-4 py-3 mt-2"
+                            ></textarea>
+                        </label>
+
+                    </div>
+
+
+                    <h2 class="font-black text-xl mt-8">
+                        Mode de paiement
+                    </h2>
+
+
+                    <div class="grid sm:grid-cols-3 gap-3 mt-4">
+
+                        <label class="border rounded-2xl p-4">
+                            <input
+                                required
+                                type="radio"
+                                name="paiement"
+                                value="Paiement à la livraison"
+                            >
+                            💵 Livraison
+                        </label>
+
+
+                        <label class="border rounded-2xl p-4">
+                            <input
+                                type="radio"
+                                name="paiement"
+                                value="Wave"
+                            >
+                            💙 Wave
+                        </label>
+
+
+                        <label class="border rounded-2xl p-4">
+                            <input
+                                type="radio"
+                                name="paiement"
+                                value="Orange Money"
+                            >
+                            🟠 Orange Money
+                        </label>
+
+                    </div>
+
+
+                    <button
+                        class="w-full gradient-orange text-white py-4 rounded-xl font-black mt-8"
+                    >
+                        Confirmer ma commande
+                    </button>
+
+                </form>
+
+
+                <aside class="bg-gray-50 rounded-3xl p-7 h-fit">
+
+                    <h2 class="font-black text-xl">
+                        Votre commande
+                    </h2>
+
+                    <div
+                        id="summary"
+                        class="mt-5"
+                    ></div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <div
+        id="success"
+        class="modal fixed inset-0 z-[90] flex items-center justify-center p-3"
+    ></div>
+
+
+    <footer class="bg-gray-950 text-white mt-20">
+
+        <div class="container-shop py-14 grid md:grid-cols-4 gap-10">
+
+            <div>
+
+                <b class="text-xl">
+                    🍔 DIAN SHOP
+                </b>
+
+                <p class="text-gray-400 text-sm mt-4">
+                    Le goût qui vous fait revenir !
+                    Fast-food savoureux livré à Dakar.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <b>
+                    Navigation
+                </b>
+
+                <div class="grid gap-3 mt-4 text-sm text-gray-400">
+
+                    <a href="index.html">
+                        Accueil
+                    </a>
+
+                    <a href="produits.html">
+                        Menu
+                    </a>
+
+                    <a href="a-propos.html">
+                        À propos
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <b>
+                    Catégories
+                </b>
+
+                <div class="grid gap-3 mt-4 text-sm text-gray-400">
+
+                    <a href="produits.html?categorie=burgers">
+                        Burgers
+                    </a>
+
+                    <a href="produits.html?categorie=fataya">
+                        Fataya
+                    </a>
+
+                    <a href="produits.html?categorie=pizza">
+                        Pizza
+                    </a>
+
+                    <a href="produits.html?categorie=tacos">
+                        Tacos
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <b>
+                    Contact
+                </b>
+
+                <div class="grid gap-3 mt-4 text-sm text-gray-400">
+
+                    <p>
+                        📞 +221 77 692 76 51
+                    </p>
+
+                    <p>
+                        💬 WhatsApp
+                    </p>
+
+                    <p>
+                        📍 Dakar, Sénégal
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="border-t border-white/10 text-center py-5 text-xs text-gray-500">
+            © 2026 DIAN SHOP — Tous droits réservés.
+        </div>
+
+    </footer>
+
+
+    <script src="js/produits.js"></script>
+
+    <script src="js/app.js"></script>
+
+
+    <script>
+
+        function summary() {
+
+            let a = details();
+
+            document.getElementById("summary").innerHTML =
+                a.length
+                    ? a.map(
+                        i =>
+                            '<div class="flex justify-between py-2 text-sm">'
+                            + i.nom
+                            + ' × '
+                            + i.quantity
+                            + ' <b>'
+                            + money(i.lineTotal)
+                            + '</b></div>'
+                    ).join("")
+                    +
+                    '<hr class="my-3">'
+                    +
+                    '<div class="flex justify-between">'
+                    + '<b>Total</b>'
+                    + '<b class="text-orange-600">'
+                    + money(total())
+                    + '</b>'
+                    + '</div>'
+                    : '<p class="text-gray-500">Votre panier est vide.</p>';
+        }
+
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            summary
+        );
+
+
+        document.getElementById("form").onsubmit = e => {
+
+            e.preventDefault();
+
+
+            if (!details().length)
+                return alert("Votre panier est vide.");
+
+
+            let f = e.target;
+
+            let n =
+                "DS-"
+                + new Date().getFullYear()
+                + "-"
+                + Math.floor(1000 + Math.random() * 9000);
+
+
+            window.order = {
+
+                nom: f.nom.value,
+
+                tel: f.tel.value,
+
+                adresse: f.adresse.value,
+
+                ville: f.ville.value,
+
+                quartier: f.quartier.value,
+
+                paiement: f.paiement.value,
+
+                instructions: f.instructions.value,
+
+                num: n
+
+            };
+
+
+            document.getElementById("success").innerHTML =
+                '<div class="absolute inset-0 bg-black/60"></div>'
+                +
+                '<div class="relative bg-white rounded-3xl p-8 text-center max-w-md w-full">'
+                +
+                '<div class="text-5xl">🎉</div>'
+                +
+                '<h2 class="text-2xl font-black mt-4">'
+                + 'Commande confirmée !'
+                + '</h2>'
+                +
+                '<p class="text-gray-500 mt-2">'
+                + 'Merci '
+                + order.nom
+                + '.'
+                + '</p>'
+                +
+                '<div class="bg-orange-50 rounded-xl p-4 mt-5">'
+                +
+                '<small>NUMÉRO DE COMMANDE</small>'
+                +
+                '<b class="block text-xl mt-1">'
+                + n
+                + '</b>'
+                +
+                '</div>'
+                +
+                '<button onclick="sendWA()" class="mt-6 w-full bg-green-500 text-white rounded-xl py-3 font-bold">'
+                + 'Commander via WhatsApp'
+                + '</button>'
+                +
+                '<a href="index.html" class="block mt-3 bg-gray-900 text-white rounded-xl py-3 font-bold">'
+                + 'Accueil'
+                + '</a>'
+                +
+                '</div>';
+
+
+            document.getElementById("success").classList.add("open");
+
+            localStorage.removeItem("dianShopCart");
+
+            updateCartBadges();
+
+        };
+
+
+        function sendWA() {
+
+            let a = details();
+
+            let m =
+                "Bonjour DIAN SHOP 👋%0A"
+                +
+                "Commande "
+                + order.num
+                + "%0A"
+                +
+                "Nom : "
+                + order.nom
+                + "%0A"
+                +
+                "Téléphone : "
+                + order.tel
+                + "%0A"
+                +
+                "Adresse : "
+                + order.adresse
+                + ", "
+                + order.quartier
+                + ", "
+                + order.ville
+                + "%0A"
+                +
+                "Paiement : "
+                + order.paiement
+                + "%0A%0A"
+                +
+                "Produits :%0A";
+
+
+            a.forEach(
+                i =>
+                    m +=
+                        i.nom
+                        + " x"
+                        + i.quantity
+                        + " - "
+                        + money(i.lineTotal)
+                        + "%0A"
+            );
+
+
+            m +=
+                "%0ATotal : "
+                + money(total());
+
+
+            window.open(
+                "https://wa.me/"
+                + DIAN_WHATSAPP
+                + "?text="
+                + m,
+                "_blank"
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>

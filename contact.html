@@ -1,0 +1,451 @@
+```html
+<!doctype html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <meta name="description" content="DIAN SHOP - Fast-food à Dakar">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Contact — DIAN SHOP</title>
+
+</head>
+
+
+<body>
+
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b">
+
+
+        <div class="container-shop h-20 flex items-center justify-between">
+
+
+            <a href="index.html" class="font-black text-xl">
+
+                🍔 DIAN
+
+                <span class="text-orange-500">
+                    SHOP
+                </span>
+
+            </a>
+
+
+            <nav class="hidden md:flex gap-7 text-sm font-bold">
+
+                <a href="index.html">
+                    Accueil
+                </a>
+
+                <a href="produits.html">
+                    Menu
+                </a>
+
+                <a href="a-propos.html">
+                    À propos
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="flex gap-2">
+
+
+                <a href="panier.html"
+                   class="relative w-11 h-11 bg-gray-50 rounded-xl flex items-center justify-center">
+
+                    🛒
+
+                    <span data-cart-count
+                          class="hidden absolute -top-1 -right-1 bg-orange-500 text-white text-[10px] min-w-5 h-5 rounded-full flex items-center justify-center">
+
+                        0
+
+                    </span>
+
+                </a>
+
+
+                <a href="produits.html"
+                   class="hidden sm:block gradient-orange text-white px-5 py-3 rounded-xl font-bold">
+
+                    Commander
+
+                </a>
+
+
+                <button id="mobileMenuButton"
+                        class="md:hidden w-11 h-11 bg-gray-50 rounded-xl">
+
+                    ☰
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div id="mobileMenu"
+             class="mobile-menu md:hidden border-t">
+
+
+            <nav class="container-shop py-3 grid">
+
+
+                <a class="p-3" href="index.html">
+                    Accueil
+                </a>
+
+
+                <a class="p-3" href="produits.html">
+                    Menu
+                </a>
+
+
+                <a class="p-3" href="a-propos.html">
+                    À propos
+                </a>
+
+
+                <a class="p-3" href="contact.html">
+                    Contact
+                </a>
+
+
+                <a class="p-3 text-orange-600" href="panier.html">
+                    Panier
+                </a>
+
+
+            </nav>
+
+
+        </div>
+
+
+    </header>
+
+
+    <main>
+
+
+        <section class="bg-gray-50 py-14 text-center">
+
+
+            <div class="container-shop">
+
+
+                <span class="text-orange-500 font-black text-sm">
+                    BESOIN D'AIDE ?
+                </span>
+
+
+                <h1 class="text-4xl font-black mt-2">
+                    Contactez-nous
+                </h1>
+
+
+            </div>
+
+
+        </section>
+
+
+        <section class="py-14">
+
+
+            <div class="container-shop grid lg:grid-cols-2 gap-8">
+
+
+                <div class="grid gap-4">
+
+
+                    <div class="bg-orange-50 rounded-3xl p-7">
+
+                        <b>
+                            📞 Téléphone
+                        </b>
+
+                        <p class="mt-2">
+                            +221 77 000 00 00
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-gray-50 rounded-3xl p-7">
+
+                        <b>
+                            💬 WhatsApp
+                        </b>
+
+                        <p class="mt-2">
+                            Disponible pour vos commandes.
+                        </p>
+
+                        <a href="https://wa.me/221770000000"
+                           target="_blank"
+                           class="text-orange-600 font-bold">
+
+                            Écrire sur WhatsApp →
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="bg-gray-50 rounded-3xl p-7">
+
+                        <b>
+                            📍 Adresse
+                        </b>
+
+                        <p class="mt-2">
+                            Dakar, Sénégal
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-gray-50 rounded-3xl p-7">
+
+                        <b>
+                            🕐 Horaires
+                        </b>
+
+                        <p class="mt-2">
+                            Tous les jours · 11h00 – 23h00
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <form id="contact"
+                      class="border rounded-3xl p-7">
+
+
+                    <h2 class="text-2xl font-black">
+                        Envoyer un message
+                    </h2>
+
+
+                    <div class="grid gap-5 mt-6">
+
+
+                        <input required
+                               class="border rounded-xl px-4 py-3"
+                               placeholder="Nom">
+
+
+                        <input required
+                               type="email"
+                               class="border rounded-xl px-4 py-3"
+                               placeholder="Email">
+
+
+                        <input class="border rounded-xl px-4 py-3"
+                               placeholder="Téléphone">
+
+
+                        <textarea required
+                                  rows="6"
+                                  class="border rounded-xl px-4 py-3"
+                                  placeholder="Message">
+                        </textarea>
+
+
+                        <button class="gradient-orange text-white py-4 rounded-xl font-black">
+
+                            Envoyer le message
+
+                        </button>
+
+
+                        <p id="ok"
+                           class="hidden text-green-600 font-bold">
+
+                            ✓ Message envoyé avec succès.
+
+                        </p>
+
+
+                    </div>
+
+
+                </form>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <footer class="bg-gray-950 text-white mt-20">
+
+
+        <div class="container-shop py-14 grid md:grid-cols-4 gap-10">
+
+
+            <div>
+
+                <b class="text-xl">
+                    🍔 DIAN SHOP
+                </b>
+
+                <p class="text-gray-400 text-sm mt-4">
+                    Le goût qui vous fait revenir ! Fast-food savoureux livré à Dakar.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <b>
+                    Navigation
+                </b>
+
+
+                <div class="grid gap-3 mt-4 text-sm text-gray-400">
+
+                    <a href="index.html">
+                        Accueil
+                    </a>
+
+                    <a href="produits.html">
+                        Menu
+                    </a>
+
+                    <a href="a-propos.html">
+                        À propos
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <b>
+                    Catégories
+                </b>
+
+
+                <div class="grid gap-3 mt-4 text-sm text-gray-400">
+
+                    <a href="produits.html?categorie=burgers">
+                        Burgers
+                    </a>
+
+                    <a href="produits.html?categorie=fataya">
+                        Fataya
+                    </a>
+
+                    <a href="produits.html?categorie=pizza">
+                        Pizza
+                    </a>
+
+                    <a href="produits.html?categorie=tacos">
+                        Tacos
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <b>
+                    Contact
+                </b>
+
+
+                <div class="grid gap-3 mt-4 text-sm text-gray-400">
+
+                    <p>
+                        📞 +221 77 000 00 00
+                    </p>
+
+                    <p>
+                        💬 WhatsApp
+                    </p>
+
+                    <p>
+                        📍 Dakar, Sénégal
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="border-t border-white/10 text-center py-5 text-xs text-gray-500">
+
+            © 2026 DIAN SHOP — Tous droits réservés.
+
+        </div>
+
+
+    </footer>
+
+
+    <script src="js/produits.js"></script>
+
+    <script src="js/app.js"></script>
+
+
+    <script>
+
+        document.getElementById('contact').onsubmit = e => {
+
+            e.preventDefault();
+
+            e.target.reset();
+
+            document.getElementById('ok').classList.remove('hidden');
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+```

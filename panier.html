@@ -1,0 +1,386 @@
+```html
+<!doctype html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <meta name="description" content="DIAN SHOP - Fast-food à Dakar">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Panier — DIAN SHOP</title>
+
+</head>
+
+<body>
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b">
+
+        <div class="container-shop h-20 flex items-center justify-between">
+
+            <a href="index.html" class="font-black text-xl">
+                🍔 DIAN
+                <span class="text-orange-500">
+                    SHOP
+                </span>
+            </a>
+
+            <nav class="hidden md:flex gap-7 text-sm font-bold">
+
+                <a href="index.html">
+                    Accueil
+                </a>
+
+                <a href="produits.html">
+                    Menu
+                </a>
+
+                <a href="a-propos.html">
+                    À propos
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+            <div class="flex gap-2">
+
+                <a href="panier.html" class="relative w-11 h-11 bg-gray-50 rounded-xl flex items-center justify-center">
+                    🛒
+
+                    <span data-cart-count class="hidden absolute -top-1 -right-1 bg-orange-500 text-white text-[10px] min-w-5 h-5 rounded-full flex items-center justify-center">
+                        0
+                    </span>
+
+                </a>
+
+                <a href="produits.html" class="hidden sm:block gradient-orange text-white px-5 py-3 rounded-xl font-bold">
+                    Commander
+                </a>
+
+                <button id="mobileMenuButton" class="md:hidden w-11 h-11 bg-gray-50 rounded-xl">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu md:hidden border-t">
+
+            <nav class="container-shop py-3 grid">
+
+                <a class="p-3" href="index.html">
+                    Accueil
+                </a>
+
+                <a class="p-3" href="produits.html">
+                    Menu
+                </a>
+
+                <a class="p-3" href="a-propos.html">
+                    À propos
+                </a>
+
+                <a class="p-3" href="contact.html">
+                    Contact
+                </a>
+
+                <a class="p-3 text-orange-600" href="panier.html">
+                    Panier
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main class="py-14">
+
+        <div class="container-shop">
+
+            <h1 class="text-4xl font-black">
+                Mon panier
+            </h1>
+
+            <div id="empty" class="hidden text-center py-24">
+
+                <div class="text-6xl">
+                    🛒
+                </div>
+
+                <h2 class="text-2xl font-black mt-4">
+                    Votre panier est vide
+                </h2>
+
+                <a href="produits.html" class="inline-block mt-5 gradient-orange text-white px-6 py-3 rounded-xl font-bold">
+                    Découvrir notre menu
+                </a>
+
+            </div>
+
+
+            <div id="content" class="grid lg:grid-cols-[1fr_380px] gap-8 mt-10">
+
+                <div id="items" class="grid gap-4">
+                </div>
+
+
+                <aside class="bg-gray-50 rounded-3xl p-7 h-fit">
+
+                    <h2 class="font-black text-xl">
+                        Résumé
+                    </h2>
+
+                    <div class="border-t mt-5 pt-5 space-y-4">
+
+                        <div class="flex justify-between">
+                            Sous-total
+                            <b id="sub"></b>
+                        </div>
+
+                        <div class="flex justify-between">
+                            Livraison
+                            <b id="del"></b>
+                        </div>
+
+                        <div class="border-t pt-4 flex justify-between text-lg">
+                            Total
+                            <b id="tot" class="text-orange-600"></b>
+                        </div>
+
+                    </div>
+
+                    <a href="commande.html" class="block text-center mt-6 gradient-orange text-white py-4 rounded-xl font-black">
+                        Passer la commande →
+                    </a>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer class="bg-gray-950 text-white mt-20">
+
+        <div class="container-shop py-14 grid md:grid-cols-4 gap-10">
+
+            <div>
+
+                <b class="text-xl">
+                    🍔 DIAN SHOP
+                </b>
+
+                <p class="text-gray-400 text-sm mt-4">
+                    Le goût qui vous fait revenir ! Fast-food savoureux livré à Dakar.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <b>
+                    Navigation
+                </b>
+
+                <div class="grid gap-3 mt-4 text-sm text-gray-400">
+
+                    <a href="index.html">
+                        Accueil
+                    </a>
+
+                    <a href="produits.html">
+                        Menu
+                    </a>
+
+                    <a href="a-propos.html">
+                        À propos
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <b>
+                    Catégories
+                </b>
+
+                <div class="grid gap-3 mt-4 text-sm text-gray-400">
+
+                    <a href="produits.html?categorie=burgers">
+                        Burgers
+                    </a>
+
+                    <a href="produits.html?categorie=fataya">
+                        Fataya
+                    </a>
+
+                    <a href="produits.html?categorie=pizza">
+                        Pizza
+                    </a>
+
+                    <a href="produits.html?categorie=tacos">
+                        Tacos
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <b>
+                    Contact
+                </b>
+
+                <div class="grid gap-3 mt-4 text-sm text-gray-400">
+
+                    <p>
+                        📞 +221 77 000 00 00
+                    </p>
+
+                    <p>
+                        💬 WhatsApp
+                    </p>
+
+                    <p>
+                        📍 Dakar, Sénégal
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="border-t border-white/10 text-center py-5 text-xs text-gray-500">
+            © 2026 DIAN SHOP — Tous droits réservés.
+        </div>
+
+    </footer>
+
+
+    <script src="js/produits.js"></script>
+
+    <script src="js/app.js"></script>
+
+
+    <script>
+
+        function draw() {
+
+            let a = details();
+
+            let it = document.getElementById("items");
+
+            document.getElementById("empty").classList.toggle("hidden", !!a.length);
+
+            document.getElementById("content").classList.toggle("hidden", !a.length);
+
+            it.innerHTML = a.map(i =>
+
+                '<div class="bg-white border rounded-2xl p-4 flex gap-4">' +
+
+                    '<img src="' + i.image + '" class="w-24 h-24 object-cover rounded-xl">' +
+
+                    '<div class="flex-1">' +
+
+                        '<div class="flex justify-between">' +
+
+                            '<b>' +
+                                i.nom +
+                            '</b>' +
+
+                            '<button onclick="removeFromCart(' + i.id + ');draw()">' +
+                                '✕' +
+                            '</button>' +
+
+                        '</div>' +
+
+                        '<p class="text-sm text-gray-500">' +
+                            money(i.prix) +
+                        '</p>' +
+
+                        '<div class="flex justify-between items-center mt-4">' +
+
+                            '<div class="flex border rounded-xl">' +
+
+                                '<button class="px-3 py-2" onclick="setQuantity(' + i.id + ',' + (i.quantity - 1) + ');draw()">' +
+                                    '−' +
+                                '</button>' +
+
+                                '<span class="px-3 py-2">' +
+                                    i.quantity +
+                                '</span>' +
+
+                                '<button class="px-3 py-2" onclick="setQuantity(' + i.id + ',' + (i.quantity + 1) + ');draw()">' +
+                                    '+' +
+                                '</button>' +
+
+                            '</div>' +
+
+                            '<b class="text-orange-600">' +
+                                money(i.lineTotal) +
+                            '</b>' +
+
+                        '</div>' +
+
+                    '</div>' +
+
+                '</div>'
+
+            ).join("");
+
+
+            document.getElementById("sub").textContent =
+                money(subtotal());
+
+
+            document.getElementById("del").textContent =
+                delivery()
+                    ? money(delivery())
+                    : "Gratuite";
+
+
+            document.getElementById("tot").textContent =
+                money(total());
+
+        }
+
+
+        document.addEventListener("DOMContentLoaded", draw);
+
+    </script>
+
+</body>
+
+</html>
+```
